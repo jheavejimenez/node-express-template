@@ -1,14 +1,18 @@
 const router = require('express').Router();
 
 
-router.route('/example').get(async (req, res) => {
-    // code here
+router.route('/').get(async (req, res) => {
+    res.status(200).send({
+        "example": "test"
+    })
 }).post(async (req, res) => {
     // code here
 });
 
-router.route('/example/:id').put(async (req, res) => {
+router.route('/:id').put(async (req, res) => {
     // code here
 }).delete(async (req, res) => {
     // code here
 });
+
+module.exports = router;
